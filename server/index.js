@@ -10,7 +10,10 @@ const PORT = 3000;
 const LIMIT = 5;
 
 
-app.use(cors({ origin: "http://localhost:5173" }));
+app.use(cors({
+  origin: "https://papaya-sunshine-030d80.netlify.app"
+}));
+
 app.use(express.json());
 
 mongoose
