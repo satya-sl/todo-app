@@ -6,7 +6,7 @@ const cors = require("cors");
 const dayjs = require("dayjs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const LIMIT = 5;
 
 
