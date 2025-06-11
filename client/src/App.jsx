@@ -44,7 +44,7 @@ function App() {
   const fetchTasks = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:3000/tasks", {
+      const res = await axios.get("https://todo-app-2fdq.onrender.com/tasks", {
         params: { filter, page },
       });
       setTasks(res.data.tasks);
