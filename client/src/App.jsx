@@ -58,7 +58,7 @@ function App() {
   const addTask = async () => {
     if (!title.trim()) return;
     try {
-      await axios.post("http://localhost:3000/tasks", {
+      await axios.post("https://todo-app-2fdq.onrender.com/tasks", {
         title,
         dueDate: dueDate || null,
       });
@@ -72,7 +72,7 @@ function App() {
 
   const updateTask = async (id, updates) => {
     try {
-      await axios.patch(`http://localhost:3000/tasks/${id}`, updates);
+      await axios.patch(`https://todo-app-2fdq.onrender.com/tasks/${id}`, updates);
       fetchTasks();
     } catch (err) {
       console.error("Update error:", err);
@@ -81,7 +81,7 @@ function App() {
 
   const deleteTask = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/tasks/${id}`);
+      await axios.delete(`https://todo-app-2fdq.onrender.com/tasks/${id}`);
       fetchTasks();
     } catch (err) {
       console.error("Delete error:", err);
